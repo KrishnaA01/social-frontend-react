@@ -8,6 +8,8 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import EventIcon from '@mui/icons-material/Event';
 import SchoolIcon from '@mui/icons-material/School';
+import { Users } from "../../Data"
+import CloseFriend from "../closeFriend/CloseFriend";
 
 export default function Sidebar() {
   return (
@@ -52,80 +54,17 @@ export default function Sidebar() {
                 </li>
             </ul>
             <button className="sidebarButton">Show More</button>
+
+
             <hr className="sidebarHr"/>
+
+
+
             <ul className="sidebarFriendList">
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
-                <li className="sidebarFriend">
-                    <img className="sideFriendImg" src="/assets/person/2.jpeg" alt="" />
-                    <span className="sidebarFriendName">John Doe</span>
-                </li>
+                {Users.map(u=>(
+                    <CloseFriend key = {u.id} user ={u} />
+                ))}
+                
             </ul>
         </div>
       Sidebar

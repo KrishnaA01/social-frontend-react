@@ -1,15 +1,11 @@
 import Home from './pages/home/Home';
-import PersonIcon from '@mui/icons-material/Person';
+import Profile from './pages/profile/Profile';
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
 
 
 function App() {
-  return (
-    <>
-    <Home/>
-    </>
-  );
+  return <Profile/> 
 }
 
 export default App;
-
-//https://www.youtube.com/watch?v=zM93yZ_8SvE&t=117s
